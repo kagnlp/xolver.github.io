@@ -349,6 +349,7 @@ def main():
           norm_final = str(final_answer).strip().lower()
           norm_answer = str(gt_final).strip().lower()
 
+          is_correct = 0
           if norm_final == norm_answer:
               is_correct = 1
 
