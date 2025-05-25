@@ -219,7 +219,6 @@ def main():
     m = agents
 
     episodic_memory = EpisodicMemory(memory_file="/content/episodic_memory.json")
-    shared_memory = SharedMemory(m)
 
     def read_jsonl(path):
         with open(path) as f:
@@ -232,7 +231,7 @@ def main():
         problem = data['problem']
         answer = data.get('answer', None)
         task_type = "math"
-
+        shared_memory = SharedMemory(m)
         print(f"\n=== Solving problem ===\n{problem}\n")
 
         planner_prompt = PLANNER_PROMPT.format(task_type=task_type, problem=problem, m=m)
