@@ -15,11 +15,23 @@ PLANNER_PROMPT = """
 You are a planner to solve a {task_type} problem. Here is the problem for which you have to plan:
 {problem}
 
-First draft required strictly greater than {m} {task_type} specialized roles orderly labeling "Specialized Roles" to solve the problem collaboratively with
-reasoning behind your draft of each role.
+First draft required strictly greater than {m} {task_type} specialized roles labeling "Specialized Roles" to solve the problem collaboratively with
+reasoning behind your draft of each role. Format the roles clearly, for example:
+Specialized Roles:
+1. Role Name: Reasoning of what this agent should focus on.
+2. Role Name: Reasoning...
+...
+m. Role Name: Reasoning...
+m + 1. Role Name: Reasoning...
+...
 
-Then select exactly the highly {m} {task_type} influential roles orderly labeling "Influential Roles" from the prior drafted "Specialized Roles" by re-checking the reasoning behind your selection and
-assign the prior selected "Influential Roles" orderly among exactly the {m} agents to solve the problem.
+Then select exactly the highly {m} {task_type} influential roles labeling "Influential Roles" from the prior drafted "Specialized Roles" by re-checking the reasoning behind your selection and
+assign the prior selected "Influential Roles" among exactly the {m} agents to solve the problem. Format the roles clearly, for example:
+Influential Roles:
+1. Role Name: Reasoning of what this agent should focus on.
+2. Role Name: Reasoning...
+...
+m. Role Name: Reasoning...
 """
 
 DYNAMIC_AGENT_PROMPT = """
