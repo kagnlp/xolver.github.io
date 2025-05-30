@@ -350,7 +350,7 @@ def main():
         episodic_memory.save_memory("/content/episodic_memory.json")
 
         if answer is not None:
-          gt_final = answer
+          gt_final = int(answer)
           norm_final = str(final_answer).strip().lower()
           norm_answer = str(gt_final).strip().lower()
 
