@@ -321,6 +321,7 @@ def main():
         print(f"Assigned roles: {roles}")
 
         agent_responses = [""] * m
+        judge_responses = [""] * m
 
         external_retrieval = episodic_memory.retrieve(problem)
 
@@ -402,6 +403,7 @@ def main():
                     score, reasoning_str = run_candidate_code_and_score(code, parsed_test_cases)
                     print(f"Judge scored agent {role} response: {score} / {len(parsed_test_cases)}")
                     print("Reasoning:\n", reasoning_str)
+                    judge_responses[i] = score
                 else:
                     print("No valid Python code found in the candidate response.")
                     score = 0
@@ -446,10 +448,11 @@ def main():
         else:
             print("Failure!")
     
-    all_responses.append({
+        all_responses.append({
             "problem": problem,
             "planner_response":planner_response,
-            "dynamic_agent_responses": agent_responses,
+            "...\ndynamic_agent_responses(upon convergence)": agent_responses,
+            "...\njudge_responses(upon convergence)": judge_responses,
             "shared_memory": shared_memory.memory,
             "final_answer": final_answer
         })
