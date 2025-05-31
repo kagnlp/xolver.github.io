@@ -260,6 +260,7 @@ def main():
         print(f"Assigned roles: {roles}")
 
         agent_responses = [""] * m
+        judge_responses = [""] * m
 
         external_retrieval = episodic_memory.retrieve(problem)
 
@@ -339,6 +340,7 @@ def main():
                 print(f"Judge scored agent {role} response: {score} (Judge comment: {score_str[:100]}...)")
 
                 agent_responses[i] = response
+                judge_responses[i] = score_str
 
                 shared_memory.update([{
                     "agent": role,
@@ -377,10 +379,11 @@ def main():
         print(f"Ground Truth Answer: {answer}")
         print(f"Answer Match: {'Yes' if is_correct else 'No'}")
 
-    all_responses.append({
+        all_responses.append({
             "problem": problem,
             "planner_response":planner_response,
-            "dynamic_agent_responses": agent_responses,
+            "...\ndynamic_agent_responses(upon convergence)": agent_responses,
+            "...\njudge_responses(upon convergence)": judge_responses,
             "shared_memory": shared_memory.memory,
             "final_answer": final_answer
         })
