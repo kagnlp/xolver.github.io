@@ -373,13 +373,13 @@ def main():
         print(f"Answer Match: {'Yes' if is_correct else 'No'}")
     
         all_responses.append({
-                "problem": problem,
-                "planner_response":planner_response,
-                "...\ndynamic_agent_responses(upon convergence)": agent_responses,
-                "...\njudge_responses(upon convergence)": judge_responses,
-                "shared_memory": shared_memory.memory,
-                "final_answer": final_answer
-            })
+            "problem": problem,
+            "planner_response":planner_response,
+            "...\ndynamic_agent_responses(upon convergence)": agent_responses,
+            "...\njudge_responses(upon convergence)": judge_responses,
+            "shared_memory": shared_memory.memory,
+            "final_answer": final_answer
+        })
 
     # Save all responses to a pickle file
     with open("/content/all_responses.pkl", "wb") as f:
