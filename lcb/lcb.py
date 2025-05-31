@@ -302,7 +302,7 @@ def main():
 
     all_responses = []
 
-    for data in questions[:1]:
+    for data in questions[:5]:
         problem = data['question_content']
         test_cases = data['public_test_cases']
         private_test_cases = data['private_test_cases']
