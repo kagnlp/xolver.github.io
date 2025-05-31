@@ -43,3 +43,6 @@ To generate and evaluated answer for LiveCodeBench problems through Xolver, cd i
 	`lcb.py`
 
  You can download the LiveCodeBench dataset [here](https://huggingface.co/datasets/livecodebench/code_generation)
+
+**For math episodic retrieval**
+You can download the math episodic retrieval corpus [here](https://huggingface.co/datasets/nvidia/OpenMathReasoning)
