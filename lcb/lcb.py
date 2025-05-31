@@ -416,7 +416,7 @@ def main():
                     "score": score
                 }])
 
-            #parsed_test_cases = json.loads(private_test_cases)
+            #parsed_test_cases = json.loads(test_cases)
             #scores = [entry['score'] for entry in shared_memory.memory]
             #if len(scores) == m and all(score == len(parsed_test_cases) for score in scores):
             #    print(f"All agents pass all test cases in iteration {iteration}. Early stopping.")
