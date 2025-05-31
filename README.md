@@ -1,6 +1,6 @@
 # Xolver: Multi-Agent Reasoning with Holistic Experience Learning Just Like an Olympiad Team
 
-This is a preliminary implementation of the paper "Xolver: Multi-Agent Reasoning with Holistic Experience Learning Just Like an Olympiad Team". More tasks and settings will be released soon. You may see some additional debate logs [here]().
+This is a preliminary implementation of the paper "Xolver: Multi-Agent Reasoning with Holistic Experience Learning Just Like an Olympiad Team". More tasks and settings will be released soon. You may see some additional Xolver logs [here](https://drive.google.com/drive/folders/1O-KYcgQcEniIGfxbUcQjyZLjAzUJkr0s?usp=sharing).
 
 [Md. Tanzib Hosain](https://www.linkedin.com/in/tanzib-mahammad-9334b1304/),
 [Salman Rahman](https://salmanrahman.net/),
