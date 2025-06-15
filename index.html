@@ -100,16 +100,14 @@
   </div>
 </section>
 
-<section class="section">
+<!-- Abstract Section -->  
+<section class="section" id="abstract">
   <div class="container is-max-desktop">
     <div class="content has-text-justified">
+      <h2 id="insights" class="title is-3 has-text-centered">Abstract <a class="is-size-5" href="#abstract"><i class="fas fa-link"></i></a></h2>
       <p>
         Despite impressive progress on complex reasoning, current large language models (LLMs) typically operate in isolation—treating each problem as an independent attempt, without accumulating or integrating experiential knowledge. In contrast, expert problem solvers—such as Olympiad or programming contest teams—leverage a rich tapestry of experiences: absorbing mentorship from coaches, developing intuition from past problems, leveraging knowledge of tool usage and library functionality, adapting strategies based on the expertise and experiences of peers, continuously refining their reasoning through trial and error, and learning from other related problems even during competition.
-      </p>
-      <p>
         Inspired by this, we introduce 𝕏olver—a training-free, multi-agent reasoning framework that equips a black-box LLM with a persistent, evolving memory of holistic experience. 𝕏olver integrates diverse experience modalities, including external and self-retrieval, tool use, agent collaboration, self-evaluation, and iterative refinement. By learning from relevant strategies, code fragments, and abstract reasoning patterns at inference time, 𝕏olver avoids generating solutions from scratch—marking a transition from isolated inference toward experience-aware language agents.
-      </p>
-      <p>
         Built on both open-weight and proprietary models, 𝕏olver consistently outperforms specialized reasoning agents (e.g., OctoTools, CheatSheet, Search-o1). Even when instantiated with lightweight backbones (e.g., QWQ-32B), it often surpasses the most advanced models to date—including Qwen3-235B, Gemini 2.5 Pro, o3, and o4-mini-high. With a stronger backbone like o3-mini-high, it achieves a new best result—<span class="has-text-weight-bold">98.1% on GSM8K, 94.4% on AIME'24, 93.7% on AIME'25, 99.8% on Math-500, and 91.6% on LiveCodeBench</span>—highlighting holistic experience learning as a key step toward dynamic, generalist agents capable of expert-level reasoning.
       </p>
     </div>
@@ -123,6 +121,9 @@
       <div class="column is-full-width">
         <img src="./static/images/framework.png" alt="𝕏olver Framework"
              class="framework-image"/>
+        <p class="figure-note">
+          𝕏olver Scaffold. At each iteration, agents receive their past reasoning history and topranked exemplars to generate new thoughts and responses, using tools (e.g., code) as needed. A judge model ranks outputs, and an intermediate memory maintains the best responses over time. Exemplars are initialized via episodic retrieval and continually updated with high-quality solutions from the memory. Iteration stops when convergence or max steps are reached, followed by final verification.
+        </p>
       </div>
     </div>
     <!--/ Framework Figure. -->
@@ -136,7 +137,6 @@
       <div class="column is-full-width">
         <h2 id="results" class="title is-3 has-text-centered">Results <a class="is-size-5" href="#results"><i class="fas fa-link"></i></a></h2>
         <div class="content has-text-centered">
-          <p class="table-caption">𝕏olver against SoTA reasoning models, specialized models, and other reasoning agents across mathematical and coding tasks. Best results are boldfaced and second-best results are underlined.</p>
           <div class="table-container">
             <table class="table is-bordered is-striped is-fullwidth is-hoverable">
               <thead>
@@ -214,7 +214,7 @@
             </table>
           </div>
           <p class="table-note">
-            T: Think models. LongCoT*: standard prompting for reasoning models. "–" denotes either n/a (e.g., only math/code specialized models) or results not reported.
+            𝕏olver against SoTA reasoning models, specialized models, and other reasoning agents across mathematical and coding tasks. Best results are boldfaced and second-best results are underlined. T: Think models. LongCoT*: standard prompting for reasoning models. "–" denotes either n/a (e.g., only math/code specialized models) or results not reported.
           </p>
         </div>
       </div>
