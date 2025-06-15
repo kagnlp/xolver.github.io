@@ -264,98 +264,70 @@
   </div>
 </section>
 
-<style>
-  .highlightcell {
-    background-color: #f0f7eb; /* Light green background for highlighted cells */
-    font-weight: bold;
-  }
-  .table-container {
-    overflow-x: auto;
-    margin: 1em 0;
-  }
-  table.reasoning-pattern {
-    border-collapse: collapse;
-    width: 100%;
-    text-align: center;
-    font-family: sans-serif;
-  }
-  table.reasoning-pattern th,
-  table.reasoning-pattern td {
-    border: 1px solid #ccc;
-    padding: 0.5em;
-  }
-  table.reasoning-pattern th {
-    background-color: #f5f5f5;
-  }
-  .green {
-    color: OliveGreen;
-  }
-  .red {
-    color: red;
-  }
-  .caption {
-    font-size: 0.95em;
-    margin-top: 0.5em;
-    font-style: italic;
-    max-width: 900px;
-  }
-</style>
-
-<div class="table-container">
-  <table class="reasoning-pattern">
-    <thead>
-      <tr>
-        <th rowspan="2"><strong>Reasoning Pattern</strong></th>
-        <th colspan="2"><strong>Correct Solutions</strong></th>
-        <th colspan="2"><strong>Incorrect Solutions</strong></th>
-      </tr>
-      <tr>
-        <th>Easy → Medium</th>
-        <th>Medium → High</th>
-        <th>Easy → Medium</th>
-        <th>Medium → High</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Self-Evaluation (↑)</strong></td>
-        <td class="highlightcell"><span style="text-decoration: underline; color: OliveGreen;">0.35 → 0.38</span></td>
-        <td class="highlightcell"><span style="text-decoration: underline; color: OliveGreen;">0.38 → 0.40</span></td>
-        <td><span style="text-decoration: underline;">0.35 → 0.37</span></td>
-        <td class="highlightcell"><span style="text-decoration: underline; color: OliveGreen;">0.32 → 0.35</span></td>
-      </tr>
-      <tr>
-        <td><strong>New Approach (↑)</strong></td>
-        <td style="color: OliveGreen;">0.18 → 0.21</td>
-        <td style="color: OliveGreen;">0.21 → 0.24</td>
-        <td style="color: OliveGreen;">0.17 → 0.24</td>
-        <td style="color: OliveGreen;">0.24 → 0.26</td>
-      </tr>
-      <tr>
-        <td><strong>Problem Rephrasing (↓↑)</strong></td>
-        <td style="color: red;">0.20 → 0.17</td>
-        <td>0.18 → 0.18</td>
-        <td>0.23 → 0.24</td>
-        <td style="color: OliveGreen;">0.24 → 0.25</td>
-      </tr>
-      <tr>
-        <td><strong>Subgoal Setup (↓↑)</strong></td>
-        <td style="color: red;">0.14 → 0.13</td>
-        <td style="color: red;">0.13 → 0.11</td>
-        <td class="highlightcell"><span style="text-decoration: underline; color: OliveGreen;">0.11 → 0.12</span></td>
-        <td><span style="text-decoration: underline;">0.11 → 0.11</span></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="caption">
-    <strong>Table:</strong> Changes in major reasoning pattern frequencies as problem difficulty increases in LiveCodeBench, comparing correct vs. incorrect solutions. 
-    <span style="color: OliveGreen;">Green</span> and <span style="color: red;">red</span> indicate statistically significant increases or decreases (<i>p</i> &lt; 0.05). 
-    Underlined cells highlight patterns where <code>\xolver</code> improves over OpenCodeReasoning, which otherwise shows a declining trend. Direction arrows denote: 
-    ↑ = increase, ↓ = decrease, ↓↑ = mixed trend (decrease in correct, increase in incorrect). 
-    <code>\xolver</code> increases use of self-evaluation and new approaches with task difficulty, and demonstrates targeted subgoal setup and problem rephrasing when solutions fail—reflecting its adaptive, collaborative reasoning.
+<section class="section" id="reasoning-patterns">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Reasoning Patterns <a class="is-size-5" href="#reasoning-patterns"><i class="fas fa-link"></i></a></h2>
+        <div class="content has-text-centered">
+          <p class="table-caption">
+            Changes in major reasoning pattern frequencies as problem difficulty increases in LiveCodeBench, comparing correct vs. incorrect solutions.
+            <span style="color:DarkOliveGreen">Green</span> and <span style="color:red">red</span> indicate statistically significant increases or decreases (<em>p</em> &lt; 0.05). Underlined cells highlight patterns where <code>\xolver</code> improves over OpenCodeReasoning, which otherwise shows a declining trend.
+            Direction arrows denote: ↑ = increase, ↓ = decrease, ↓↑ = mixed trend. 
+            <code>\xolver</code> increases use of self-evaluation and new approaches with task difficulty, and demonstrates targeted subgoal setup and problem rephrasing when solutions fail—reflecting its adaptive, collaborative reasoning.
+          </p>
+          <div class="table-container">
+            <table class="table is-bordered is-striped is-fullwidth is-hoverable">
+              <thead>
+                <tr>
+                  <th rowspan="2">Reasoning Pattern</th>
+                  <th colspan="2">Correct Solutions</th>
+                  <th colspan="2">Incorrect Solutions</th>
+                </tr>
+                <tr>
+                  <th>Easy → Medium</th>
+                  <th>Medium → High</th>
+                  <th>Easy → Medium</th>
+                  <th>Medium → High</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Self-Evaluation (↑)</td>
+                  <td><u><span style="color:OliveGreen">0.35 → 0.38</span></u></td>
+                  <td><u><span style="color:OliveGreen">0.38 → 0.40</span></u></td>
+                  <td><u>0.35 → 0.37</u></td>
+                  <td><u><span style="color:OliveGreen">0.32 → 0.35</span></u></td>
+                </tr>
+                <tr>
+                  <td>New Approach (↑)</td>
+                  <td><span style="color:OliveGreen">0.18 → 0.21</span></td>
+                  <td><span style="color:OliveGreen">0.21 → 0.24</span></td>
+                  <td><span style="color:OliveGreen">0.17 → 0.24</span></td>
+                  <td><span style="color:OliveGreen">0.24 → 0.26</span></td>
+                </tr>
+                <tr>
+                  <td>Problem Rephrasing (↓↑)</td>
+                  <td><span style="color:red">0.20 → 0.17</span></td>
+                  <td>0.18 → 0.18</td>
+                  <td>0.23 → 0.24</td>
+                  <td><span style="color:OliveGreen">0.24 → 0.25</span></td>
+                </tr>
+                <tr>
+                  <td>Subgoal Setup (↓↑)</td>
+                  <td><span style="color:red">0.14 → 0.13</span></td>
+                  <td><span style="color:red">0.13 → 0.11</span></td>
+                  <td><u><span style="color:OliveGreen">0.11 → 0.12</span></u></td>
+                  <td><u>0.11 → 0.11</u></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
