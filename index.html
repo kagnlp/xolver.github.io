@@ -122,7 +122,7 @@
         <img src="./static/images/framework.png" alt="𝕏olver Framework"
              class="framework-image"/>
         <p>
-          𝕏olver Scaffold. At each iteration, agents receive their past reasoning history and top ranked exemplars to generate new thoughts and responses, using tools (e.g., code) as needed. A judge model ranks outputs, and an intermediate memory maintains the best responses over time. Exemplars are initialized via episodic retrieval and continually updated with high-quality solutions from the memory. Iteration stops when convergence or max steps are reached, followed by final verification.
+          <span class="has-text-weight-bold">𝕏olver Scaffold.</span> At each iteration, agents receive their past reasoning history and top ranked exemplars to generate new thoughts and responses, using tools (e.g., code) as needed. A judge model ranks outputs, and an intermediate memory maintains the best responses over time. Exemplars are initialized via episodic retrieval and continually updated with high-quality solutions from the memory. Iteration stops when convergence or max steps are reached, followed by final verification.
         </p>
       </div>
     </div>
@@ -222,39 +222,19 @@
   </div>
 </section>
   
-<!-- Example Conversation Section -->
-<section class="section" id="examples">
-  <div class="container is-fullhd">
-    <h2 id="examples" class="title is-3 has-text-centered">Example Attacks <a class="is-size-5" href="#examples"><i class="fas fa-link"></i></a></h2>
-    <div class="container is-max-desktop">
-      <div class="notification has-background-danger-light has-text-centered">
-        <h4 class="is-4 has-text-danger"><strong>⚠️ Warning ⚠️</strong> The following dialogues contain highly offensive and disturbing content.</h4>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Collaboration Figure. -->
+    <div class="content has-text-justified">
+      <div class="column is-full-width">
+        <img src="./static/images/collaboration.png" alt="𝕏olver Collaboration"
+             class="collaboration-image"/>
+        <p>
+          We analyze the effect of varying the number of agents and reasoning iterations on 𝕏olver's performance. In a controlled setup, we fix one variable (e.g., 3 agents or 2 iterations) and incrementally increase the other. Performance improves consistently on both AIME ’25 and LIVECODEBENCH with more agents or iterations. To probe deeper, we conduct a budget-controlled experiment on the AIME ’25 dataset, where the total reasoning budget (i.e., number of agents × number of iterations) is fixed. While iterative reasoning remains a crucial factor for 𝕏olver's performance, we find that increasing the number of agents—particularly beyond a minimum of three—yields additional, emergent improvements, leading to over a 4% performance gain.
+        </p>
       </div>
-      <br>
     </div>
-    <div class="columns conversation-cols">
-        <!-- Left Panel -->
-        <div class="column is-one-fifth model-list">
-            <h2 class="title is-4 has-text-centered mb-4">Models</h2>
-            <div id="model-list">
-                <!-- Model items will be populated by JavaScript -->
-            </div>
-        </div>
-
-        <!-- Right Panel -->
-        <div class="column is-four-fifths conversation-panel">
-            <div class="tabs is-centered is-flex-shrink-0">
-                <ul>
-                    <li class="is-active" data-mode="no-jailbreak"><a>Single Turn</a></li>
-                    <li data-mode="x-teaming"><a><span class="x-struck">𝕏</span>-Teaming</a></li>
-                </ul>
-            </div>
-            
-            <div id="conversation-container">
-                <!-- Conversation messages will be populated dynamically -->
-            </div>
-        </div>
-    </div>
+    <!--/ Collaboration Figure. -->
   </div>
 </section>
 
