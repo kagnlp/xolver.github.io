@@ -264,68 +264,64 @@
   </div>
 </section>
 
-<section class="section" id="reasoning-patterns">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3 has-text-centered">Reasoning Patterns <a class="is-size-5" href="#reasoning-patterns"><i class="fas fa-link"></i></a></h2>
-        <div class="content has-text-centered">
-          <p class="table-caption">
-            Changes in major reasoning pattern frequencies as problem difficulty increases in LiveCodeBench, comparing correct vs. incorrect solutions.
-            <span style="color:DarkOliveGreen">Green</span> and <span style="color:red">red</span> indicate statistically significant increases or decreases (<em>p</em> &lt; 0.05). Underlined cells highlight patterns where <code>\xolver</code> improves over OpenCodeReasoning, which otherwise shows a declining trend.
-            Direction arrows denote: ↑ = increase, ↓ = decrease, ↓↑ = mixed trend. 
-            <code>\xolver</code> increases use of self-evaluation and new approaches with task difficulty, and demonstrates targeted subgoal setup and problem rephrasing when solutions fail—reflecting its adaptive, collaborative reasoning.
-          </p>
-          <div class="table-container">
-            <table class="table is-bordered is-striped is-fullwidth is-hoverable">
-              <thead>
-                <tr>
-                  <th rowspan="2">Reasoning Pattern</th>
-                  <th colspan="2">Correct Solutions</th>
-                  <th colspan="2">Incorrect Solutions</th>
-                </tr>
-                <tr>
-                  <th>Easy → Medium</th>
-                  <th>Medium → High</th>
-                  <th>Easy → Medium</th>
-                  <th>Medium → High</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Self-Evaluation (↑)</td>
-                  <td><u><span style="color:OliveGreen">0.35 → 0.38</span></u></td>
-                  <td><u><span style="color:OliveGreen">0.38 → 0.40</span></u></td>
-                  <td><u>0.35 → 0.37</u></td>
-                  <td><u><span style="color:OliveGreen">0.32 → 0.35</span></u></td>
-                </tr>
-                <tr>
-                  <td>New Approach (↑)</td>
-                  <td><span style="color:OliveGreen">0.18 → 0.21</span></td>
-                  <td><span style="color:OliveGreen">0.21 → 0.24</span></td>
-                  <td><span style="color:OliveGreen">0.17 → 0.24</span></td>
-                  <td><span style="color:OliveGreen">0.24 → 0.26</span></td>
-                </tr>
-                <tr>
-                  <td>Problem Rephrasing (↓↑)</td>
-                  <td><span style="color:red">0.20 → 0.17</span></td>
-                  <td>0.18 → 0.18</td>
-                  <td>0.23 → 0.24</td>
-                  <td><span style="color:OliveGreen">0.24 → 0.25</span></td>
-                </tr>
-                <tr>
-                  <td>Subgoal Setup (↓↑)</td>
-                  <td><span style="color:red">0.14 → 0.13</span></td>
-                  <td><span style="color:red">0.13 → 0.11</span></td>
-                  <td><u><span style="color:OliveGreen">0.11 → 0.12</span></u></td>
-                  <td><u>0.11 → 0.11</u></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
+<section class="section">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">Reasoning Patterns in 𝕏olver Traces</h2>
+    <div class="table-container">
+      <table class="table is-bordered is-striped is-fullwidth is-hoverable">
+        <thead>
+          <tr>
+            <th rowspan="2"><strong>Reasoning Pattern</strong></th>
+            <th colspan="2"><strong>Correct Solutions</strong></th>
+            <th colspan="2"><strong>Incorrect Solutions</strong></th>
+          </tr>
+          <tr>
+            <th>Easy → Medium</th>
+            <th>Medium → High</th>
+            <th>Easy → Medium</th>
+            <th>Medium → High</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Self-Evaluation (↑)</td>
+            <td><u><span style="color:OliveGreen; font-weight:bold;">0.35 → 0.38</span></u></td>
+            <td><u><span style="color:OliveGreen; font-weight:bold;">0.38 → 0.40</span></u></td>
+            <td><u>0.35 → 0.37</u></td>
+            <td><u><span style="color:OliveGreen; font-weight:bold;">0.32 → 0.35</span></u></td>
+          </tr>
+          <tr>
+            <td>New Approach (↑)</td>
+            <td><span style="color:green;">0.18 → 0.21</span></td>
+            <td><span style="color:green;">0.21 → 0.24</span></td>
+            <td><span style="color:green;">0.17 → 0.24</span></td>
+            <td><span style="color:green;">0.24 → 0.26</span></td>
+          </tr>
+          <tr>
+            <td>Problem Rephrasing (↓↑)</td>
+            <td><span style="color:red;">0.20 → 0.17</span></td>
+            <td>0.18 → 0.18</td>
+            <td>0.23 → 0.24</td>
+            <td><span style="color:green;">0.24 → 0.25</span></td>
+          </tr>
+          <tr>
+            <td>Subgoal Setup (↓↑)</td>
+            <td><span style="color:red;">0.14 → 0.13</span></td>
+            <td><span style="color:red;">0.13 → 0.11</span></td>
+            <td><u><span style="color:green; font-weight:bold;">0.11 → 0.12</span></u></td>
+            <td><u>0.11 → 0.11</u></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+    <p class="is-size-6 mt-3">
+      <strong>Caption:</strong> Changes in major reasoning pattern frequencies as problem difficulty increases in <code>LiveCodeBench</code>, comparing correct vs. incorrect solutions.
+      <span style="color:green;"><strong>Green</strong></span> and 
+      <span style="color:red;"><strong>red</strong></span> indicate statistically significant increases or decreases (p &lt; 0.05). 
+      <u>Underlined</u> cells highlight patterns where <code>\xolver</code> improves over <code>OpenCodeReasoning</code>, which otherwise shows a declining trend.
+      Direction arrows denote: ↑ = increase, ↓ = decrease, ↓↑ = mixed trend (decrease in correct, increase in incorrect).
+      <code>\xolver</code> increases use of self-evaluation and new approaches with task difficulty, and demonstrates targeted subgoal setup and problem rephrasing when solutions fail—reflecting its adaptive, collaborative reasoning.
+    </p>
   </div>
 </section>
 
