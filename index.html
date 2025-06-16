@@ -247,7 +247,7 @@
   <div class="container is-max-desktop">
     <!-- Retrieval Figure. -->
     <div class="content has-text-justified">
-      <h2 id="collaboration" class="title is-3 has-text-centered">Performance with Retrieval Methods <a class="is-size-5" href="#retrieval"><i class="fas fa-link"></i></a></h2>
+      <h2 id="retrieval" class="title is-3 has-text-centered">Performance with Retrieval Methods <a class="is-size-5" href="#retrieval"><i class="fas fa-link"></i></a></h2>
       <div class="column is-full-width">
         <img src="./static/images/retrieval.png" alt="𝕏olver Retrieval"
              class="retrieval-image"/>
@@ -268,11 +268,61 @@
   </div>
 </section>
 
+<section class="section" id="fine_grain">
+  <div class="container is-max-desktop">
+    <div class="content has-text-justified">
+      <h2 id="fine_grain" class="title is-3 has-text-centered">
+        Cost Analysis and How Long Do Agents Think 
+        <a class="is-size-5" href="#fine_grain"><i class="fas fa-link"></i></a>
+      </h2>
+
+      <!-- Two side-by-side figures -->
+      <div class="columns is-centered is-vcentered">
+        <div class="column">
+          <figure class="image is-4by3">
+            <img src="./static/images/fine_math" alt="𝕏olver Fine Math" class="cost-image">
+          </figure>
+        </div>
+        <div class="column">
+          <figure class="image is-4by3">
+            <img src="./static/images/fine_code" alt="𝕏olver Fine Code" class="cost-image">
+          </figure>
+        </div>
+        <p>
+          We perform a
+          fine-grained analysis of
+          𝕏olver's performance
+          across both MATH-500
+          and LiveCodeBench.On MATH-500, 𝕏olver
+          (both o3-mini-medium and
+          QWQ-32B) consistently
+          outperforms CheatSheet
+          across nearly all seven subject
+          categories, despite the latter
+          relying on costly per-problem
+          memory updates. The only exception is in Number Theory, where o3-mini-medium scores 99.2
+          compared to CheatSheet's 99.5. As for QWQ-32B, 𝕏olver achieves substantial accuracy gains
+          over CheatSheet across all categories, with improvements of +9.0% in Prealgebra, +8.5% in Algebra,
+          +11.0% in Number Theory, +8.5% in Counting and Probability, +8.8% in Geometry, +10.0% in
+          Intermediate Algebra, and +7.5% in Precalculus. On LiveCodeBench, 𝕏olver demonstrates even more pronounced gains. The o3-mini-medium variant achieves
+          95.6%, 90.4%, and 85.8% accuracy on Easy, Medium,
+          and Hard problems respectively, significantly outperforming CodeSim by +4.5%, +11.9%, and a striking +32.3%
+          margin on hard examples. Even with a weaker QWQ-32B backbone, 𝕏olver (95.2%, 87.5%, 70.0%) surpasses
+          all baselines and achieves similar gains.
+        </p>
+      </div>
+      <!-- /Two side-by-side figures -->
+
+    </div>
+  </div>
+</section>
+
+
 <section class="section" id="cost">
   <div class="container is-max-desktop">
     <!-- Cost Figure. -->
     <div class="content has-text-justified">
-      <h2 id="collaboration" class="title is-3 has-text-centered">Cost Ana <a class="is-size-5" href="#cost"><i class="fas fa-link"></i></a></h2>
+      <h2 id="cost" class="title is-3 has-text-centered">Cost Analysis and How Long Do Agents Think <a class="is-size-5" href="#cost"><i class="fas fa-link"></i></a></h2>
       <div class="column is-full-width">
         <img src="./static/images/cost.png" alt="𝕏olver Cost"
              class="cost-image"/>
@@ -289,7 +339,7 @@
           to context sharing and inter-agent communication, while approximately 25% are spent on actual
           reasoning steps. We also compare the total token usage of 𝕏olver with a single agent reasoning
           framework Search-o1 for
-          token count. As expected, 𝕏olver incurs higher token costs—approximately 1.5× that of Searcho1—due to its collaborative and iterative multi-agent reasoning. However, this moderate increase
+          token count. As expected, 𝕏olver incurs higher token costs—approximately 1.5× that of Search-o1—due to its collaborative and iterative multi-agent reasoning. However, this moderate increase
           represents a highly efficient trade-off given the substantial performance improvements observed.
         </p>
       </div>
