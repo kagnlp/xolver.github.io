@@ -253,7 +253,7 @@
              class="retrieval-image"/>
         <p>
           We evaluate the impact of
-          different retrieval strategies on Xolver by
+          different retrieval strategies on 𝕏olver by
           comparing three settings: (1) External Retrieval, where the model retrieves the top-k
           (e.g., k = 5) most similar problems and
           their solutions from an external corpus; (2) Self-Retrieval,
@@ -265,6 +265,36 @@
       </div>
     </div>
     <!--/ Retrieval Figure. -->
+  </div>
+</section>
+
+<section class="section" id="cost">
+  <div class="container is-max-desktop">
+    <!-- Cost Figure. -->
+    <div class="content has-text-justified">
+      <h2 id="collaboration" class="title is-3 has-text-centered">Cost Ana <a class="is-size-5" href="#cost"><i class="fas fa-link"></i></a></h2>
+      <div class="column is-full-width">
+        <img src="./static/images/cost.png" alt="𝕏olver Cost"
+             class="cost-image"/>
+        <p>
+          We perform a detailed analysis of token usage, reporting input, reasoning, and output statistics for 𝕏olver (QWQ-32B)
+          across all datasets. Our
+          LLM token usage has computational complexity of
+          O(mI), where m is the
+          number of agents and I is
+          the number of reasoning iterations. However, the runtime complexity remains O(I) since the dynamic agents operate in parallel. This is significantly
+          more efficient than the self-consistency, which typically require 32–64 generations per example, as well as the baseline CheatSheet framework, which incurs a memory update complexity of
+          O(n<sup>2</sup>)—quadratic in the test dataset size—due to usefulness estimation over all previous examples
+          after solving each new example. As a multi-agent system, 𝕏olver allocates a majority of its tokens
+          to context sharing and inter-agent communication, while approximately 25% are spent on actual
+          reasoning steps. We also compare the total token usage of 𝕏olver with a single agent reasoning
+          framework Search-o1 for
+          token count. As expected, 𝕏olver incurs higher token costs—approximately 1.5× that of Searcho1—due to its collaborative and iterative multi-agent reasoning. However, this moderate increase
+          represents a highly efficient trade-off given the substantial performance improvements observed.
+        </p>
+      </div>
+    </div>
+    <!--/ Cost Figure. -->
   </div>
 </section>
 
