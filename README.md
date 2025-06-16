@@ -20,7 +20,7 @@ Even with lightweight backbones (QWQ-32B), Xolver often surpasses the most advan
 - With stronger backbones (o3-mini-high), achieves new best results across all benchmarks
 
 ### Resources
-- [Paper](https://arxiv.org/abs/2504.13203)
+- [Paper](https://github.com/kraritt/Xolver/blob/main/Xolver.pdf)
 - [Code](https://github.com/kagnlp/Xolver)
 
 ### Website License
