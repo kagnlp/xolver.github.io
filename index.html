@@ -230,16 +230,41 @@
   <div class="container is-max-desktop">
     <!-- Collaboration Figure. -->
     <div class="content has-text-justified">
-      <h2 id="collaboration" class="title is-3 has-text-centered">Performance with Increasing Agents and Iterations <a class="is-size-5" href="#collaboration"><i class="fas fa-link"></i></a></h2>
+      <h2 id="collaboration" class="title is-3 has-text-centered">Performance with Agents and Iterations <a class="is-size-5" href="#collaboration"><i class="fas fa-link"></i></a></h2>
       <div class="column is-full-width">
         <img src="./static/images/collaboration.png" alt="𝕏olver Collaboration"
              class="collaboration-image"/>
         <p>
-          We analyze the effect of varying the number of agents and reasoning iterations on 𝕏olver's performance. In a controlled setup, we fix one variable (e.g., 3 agents or 2 iterations) and incrementally increase the other. Performance improves consistently on both AIME ’25 and LIVECODEBENCH with more agents or iterations. To probe deeper, we conduct a budget-controlled experiment on the AIME ’25 dataset, where the total reasoning budget (i.e., number of agents × number of iterations) is fixed. While iterative reasoning remains a crucial factor for 𝕏olver's performance, we find that increasing the number of agents—particularly beyond a minimum of three—yields additional, emergent improvements, leading to over a 4% performance gain.
+          We analyze the effect of varying the number of agents and reasoning iterations on 𝕏olver's performance. In a controlled setup, we fix one variable (e.g., 3 agents or 2 iterations) and incrementally increase the other. Performance improves consistently on both AIME ’25 and LiveCodeBench with more agents or iterations. To probe deeper, we conduct a budget-controlled experiment on the AIME ’25 dataset, where the total reasoning budget (i.e., number of agents × number of iterations) is fixed. While iterative reasoning remains a crucial factor for 𝕏olver's performance, we find that increasing the number of agents—particularly beyond a minimum of three—yields additional, emergent improvements, leading to over a 4% performance gain.
         </p>
       </div>
     </div>
     <!--/ Collaboration Figure. -->
+  </div>
+</section>
+
+<section class="section" id="retrieval">
+  <div class="container is-max-desktop">
+    <!-- Retrieval Figure. -->
+    <div class="content has-text-justified">
+      <h2 id="collaboration" class="title is-3 has-text-centered">Performance with Retrieval Methods <a class="is-size-5" href="#retrieval"><i class="fas fa-link"></i></a></h2>
+      <div class="column is-full-width">
+        <img src="./static/images/retrieval.png" alt="𝕏olver Retrieval"
+             class="retrieval-image"/>
+        <p>
+          We evaluate the impact of
+          different retrieval strategies on Xolver by
+          comparing three settings: (1) External Retrieval, where the model retrieves the top-k
+          (e.g., k = 5) most similar problems and
+          their solutions from an external corpus; (2) Self-Retrieval,
+          where the model recalls the top-k most similar problems and solutions from its own internal memory; and (3) No Retrieval, where
+          neither external nor self-retrieval is used.
+          Performance on both AIME '25 and LiveCodeBench follows the trend:
+          External Retrieval > Self-Retrieval > No Retrieval.
+        </p>
+      </div>
+    </div>
+    <!--/ Retrieval Figure. -->
   </div>
 </section>
 
@@ -252,7 +277,7 @@
         <img src="./static/images/agreement.png" alt="𝕏olver Agreement"
              class="agreement-image"/>
         <p>
-          We conduct an in-depth analysis combining qualitative runtime inspection with controlled experiments. We begin by manually studying Xolver’s agent interaction traces on AIME '25 and LiveCodeBench. These case studies reveal that at each iteration, dynamic agents attempt to improve upon earlier failures by leveraging Judge agent feedback and by aligning with top-ranked outputs
+          We conduct an in-depth analysis combining qualitative runtime inspection with controlled experiments to understand the reasoning and problem-solving strategies behind 𝕏olver. We begin by manually studying Xolver’s agent interaction traces on AIME '25 and LiveCodeBench. These case studies reveal that at each iteration, dynamic agents attempt to improve upon earlier failures by leveraging Judge agent feedback and by aligning with top-ranked outputs
           stored in the shared memory. This process results in progressively refined outputs, increased
           agent alignment, and eventual convergence toward correct solutions. To verify this behavior systematically, we conduct a controlled experiment across both math and
           code tasks. We instantiate two dynamic agents with complementary strengths: a Coder agent and a
