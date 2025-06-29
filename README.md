@@ -1,6 +1,6 @@
 ## Xolver
 
-This website showcases our work on Xolver: Multi-Agent Reasoning with Holistic Experience Learning Just Like an Olympiad Team. The website is adapted from [Nerfies website](https://nerfies.github.io).
+This website showcases our work on Xolver: Multi-Agent Reasoning with Holistic Experience Learning Just Like an Olympiad Team. 
 
 ### Project Overview
 Xolver is a training-free, multi-agent reasoning framework that equips black-box LLMs with persistent, evolving memory of holistic experience. Inspired by how expert problem solvers like Olympiad teams leverage diverse experiences, Xolver integrates external retrieval, tool use, agent collaboration, self-evaluation, and iterative refinement to achieve expert-level reasoning across mathematics and programming tasks.
